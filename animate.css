@@ -1,0 +1,104 @@
+/* General animation for the icons to drop down */
+.hero-title-icon-container ion-icon {
+  opacity: 0;
+  transform: translateY(-50px); /* Initial position: above */
+  transition: all 0.8s ease-in-out;
+}
+
+/* Sun icon rotation animation */
+.hero-title-icon-container:nth-child(2) ion-icon {
+  opacity: 0;
+  transform: translateY(-50px) rotate(0deg); /* Initial position */
+  transition: all 1s ease-in-out;
+}
+
+/* When the page loads */
+body.loaded .hero-title-icon-container ion-icon {
+  opacity: 1;
+  transform: translateY(0); /* Drop down */
+}
+
+body.loaded .hero-title-icon-container:nth-child(2) ion-icon {
+  transform: translateY(0) rotate(360deg); /* Drop and spin 360 */
+}
+
+/* speakers */
+.grid-2-col {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.grid-2-col.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.speakers-section .speaker-card {
+  opacity: 0;
+  transform: translateX(-50px); /* Start left by default */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.speakers-section .speaker-card.show {
+  opacity: 1;
+  transform: translateX(0); /* Slide to original position */
+}
+
+.speakers-section .speaker-card:nth-child(even) {
+  transform: translateX(50px); /* Start right for even cards */
+}
+
+.speakers-section .speaker-card.show:nth-child(even) {
+  transform: translateX(0); /* Slide to original position for even cards */
+}
+/* Speakers */
+
+/* Footer */
+/* Initial state of icons */
+.social-icons .icon {
+  opacity: 0;
+  transform: translateY(-100px); /* Start above the viewport */
+}
+
+/* Drop and bounce animation */
+@keyframes dropBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px); /* Start offscreen */
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(20px); /* First bounce down */
+  }
+  80% {
+    transform: translateY(-10px); /* Bounce up */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Settle in place */
+  }
+}
+
+.social-icons .icon.animate {
+  animation: dropBounce 0.6s ease-out forwards;
+}
+
+/* Staggered delay for each icon */
+.social-icons .icon:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.social-icons .icon:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.social-icons .icon:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.social-icons .icon:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+/* Footer */

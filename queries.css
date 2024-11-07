@@ -1,0 +1,227 @@
+/* Tablet Screens (up to 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    width: 90%; /* Adjust container width */
+  }
+
+  /* Hide desktop navigation */
+  .hero-nav-container {
+    display: none;
+  }
+
+  .grid-2-col,
+  .schedule-cards {
+    grid-template-columns: 1fr; /* Stack columns */
+  }
+
+  .hero-title {
+    font-size: 2rem; /* Adjust hero font size */
+  }
+
+  .hero-content-container {
+    margin-top: 4rem; /* Reduce top margin */
+    font-size: 2rem;
+  }
+
+  .hero-content-container h6 {
+    font-size: 2rem;
+  }
+
+  .hero-content-container h6 {
+    font-size: 1.4rem;
+  }
+
+  .countdown-element span {
+    font-size: 4rem; /* Adjust countdown font size */
+  }
+
+  .count-down-main {
+    flex-direction: column;
+  }
+
+  .count-down-main p {
+    font-size: 1.2rem;
+  }
+
+  .countdown-element {
+    gap: 2rem;
+  }
+
+  .workshop-section-top {
+    flex-direction: column;
+  }
+  .schedule-section,
+  .speakers-section,
+  .location-section {
+    padding: 20px;
+  }
+
+  .schedule-section {
+    flex-direction: column;
+  }
+  .location-cards {
+    width: 100%; /* Expand cards to full width */
+  }
+
+  .follow-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile Screens (up to 768px) */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh; /* Adjust hero height */
+  }
+
+  .hero-title-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem; /* Reduce padding */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack navigation links */
+    gap: 1.5rem;
+  }
+
+  .hero-content-container {
+    margin-top: 3rem;
+    font-size: 1.1rem;
+  }
+
+  .countdown-element span {
+    font-size: 3rem; /* Further adjust countdown font size */
+  }
+
+  .workshop-section,
+  .schedule-section,
+  .speakers-section,
+  .location-section {
+    padding: 15px; /* Reduce section padding */
+  }
+
+  .schedule-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .social-links-containers {
+    font-size: 1rem; /* Adjust social links size */
+    gap: 1rem;
+  }
+
+  .stats {
+    flex-direction: column;
+    width: 100%; /* Make stats full-width */
+    padding: 0;
+  }
+
+  .ecommerce-title,
+  .main-title {
+    font-size: 1.8rem; /* Reduce main title size */
+  }
+
+  .image-section img,
+  .speaker-image {
+    width: 90%; /* Reduce image size */
+  }
+
+  .stat-number,
+  .stat-title {
+    font-size: 1.5rem;
+  }
+
+  .location-card,
+  .speaker-card {
+    width: 100%; /* Make location and speaker cards full-width */
+  }
+
+  .speakers-section {
+    flex-direction: column;
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    line-height: 30px;
+  }
+
+  .hamburger-menu {
+    cursor: pointer;
+    font-size: 2rem;
+    color: white;
+  }
+
+  /* Slide-in Hamburger Menu */
+  .hamburger-dropdown.open {
+    left: 0; /* Slide in */
+  }
+
+  .hero-title-text .hamburger-menu {
+    display: block;
+  }
+
+  .location-main-container {
+    flex-direction: column;
+  }
+
+  .ecommerce-section {
+    padding: 0 0;
+  }
+}
+
+/* Small Mobile Screens (up to 480px) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-title-icon-container-main {
+    gap: 1rem; /* Reduce icon gap */
+    font-size: 2rem;
+  }
+
+  .hero-content-container {
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+
+  .countdown-element span {
+    font-size: 2rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .main-title,
+  .follow-title {
+    font-size: 1.5rem;
+  }
+
+  .schedule-section,
+  .workshop-section,
+  .location-section,
+  .follow-section {
+    padding: 10px;
+  }
+
+  .speakers-cards {
+    flex-direction: column;
+  }
+  .social-icons {
+    gap: 10px;
+  }
+
+  .location-cards {
+    flex-direction: column;
+  }
+
+  .icon {
+    width: 25px;
+    height: 25px;
+    font-size: 0.8rem;
+    line-height: 25px;
+  }
+}

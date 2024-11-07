@@ -1,0 +1,703 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #1b1b1b;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Sticky Navigation */
+.main-nav-container.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays above other content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+  /* background-color: #222; */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.main-nav-container.sticky .hero-title-icon-container-main {
+  display: none;
+}
+.container {
+  width: 1250px;
+  margin: 0 auto;
+}
+
+.section-padding {
+  padding: 2.4rem 0.4rem;
+}
+
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+/* HAMBURGER STYLES */
+/* Hamburger Dropdown */
+.hamburger-dropdown {
+  position: fixed;
+  top: 0;
+  left: -100%; /* Initially off-screen */
+  width: 40%;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  overflow-y: auto;
+}
+
+.hamburger-dropdown nav ul {
+  list-style: none;
+  padding: 2.4rem 0;
+  text-align: center;
+}
+
+.hamburger-dropdown nav ul li {
+  border-bottom: 1px solid red;
+}
+
+.hamburger-dropdown nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  display: block;
+}
+
+.hamburger-dropdown nav ul li a:hover {
+  color: #e50914;
+}
+
+/* Close Button */
+.close-btn {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* Media Query for Mobile Phones */
+@media (max-width: 600px) {
+  /* Adjust Dropdown Width */
+  .hamburger-dropdown {
+    width: 80%; /* Take more width on smaller screens */
+    padding-top: 1.5rem;
+  }
+
+  /* Adjust Close Button */
+  .close-btn {
+    font-size: 1.5rem; /* Slightly smaller close button */
+    top: 0.8rem;
+    right: 0.8rem;
+  }
+
+  /* Adjust Navigation List */
+  .hamburger-dropdown nav ul {
+    padding: 2rem 0; /* Adjust padding for smaller screens */
+  }
+
+  /* Adjust List Items */
+  .hamburger-dropdown nav ul li a {
+    font-size: 1.2rem; /* Smaller font size for links */
+    margin: 0.8rem 0;
+  }
+
+  /* Adjust Hover Color for Mobile */
+  .hamburger-dropdown nav ul li a:hover {
+    color: #ff6b6b; /* Slightly lighter hover color on mobile */
+  }
+}
+
+/* HAMBURGER STYLES */
+
+/* HERO SECTION */
+.hero-title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  font-family: "Courier New", Courier, monospace;
+}
+.hero-title-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem;
+  border-bottom: 2px solid red;
+}
+
+.hero-title-text {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero-title-text .hamburger-menu {
+  display: none;
+}
+
+.hero-title-icon-container-main {
+  display: flex;
+  gap: 2.5rem;
+  font-size: 3rem;
+}
+.hero-title-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+.hero-title-icon-container p {
+  font-size: 0.8rem;
+}
+.hero-icon {
+  width: 2rem;
+  height: 2rem;
+  font-size: 3rem;
+}
+.hero {
+  background-attachment: fixed;
+  background-image: url("/assests/Images/event-hero=image.jpg"); /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+.hero-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2.4rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+nav ul li a:hover {
+  color: red;
+}
+.social-links-containers {
+  display: flex;
+  gap: 1.3rem;
+  font-size: 1.3rem;
+}
+
+.hero-content-container {
+  margin-top: 8rem;
+  font-size: 1.5rem;
+}
+
+.hero-content-container b {
+  font-size: 1.1rem;
+}
+
+.hero-content-2 {
+  border-bottom: 2px solid red;
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.2rem;
+}
+
+.social-icon {
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  color: red;
+}
+
+.red {
+  color: red !important;
+}
+/* HERO-SECTION */
+
+/* COUNTDOWN SECTION */
+.section-countdown {
+  background-color: #ff4c4c;
+}
+.count-down-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-countdown h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: "Roboto";
+  border-bottom: 3px solid red;
+  margin-bottom: 0.5rem;
+}
+.countdown-element-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1.1rem 2.4rem;
+}
+.countdown-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+}
+.countdown-element p {
+  font-size: 0.9rem;
+  color: #fff;
+  text-align: center;
+}
+
+.countdown-element span {
+  font-size: 5rem;
+  font-stretch: ultra-expanded;
+  font-weight: 700;
+  margin-top: -2rem;
+  font-family: "Courier New", Courier, monospace;
+}
+/* COUNTDOWN SECTION */
+
+/* WORKSHOP SECTION */
+.workshop-section {
+  padding: 20px;
+}
+.workshop-section-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3.2rem;
+}
+.workshop-header {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.intro-text {
+  color: #ff4c4c; /* Red color */
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 5px 0;
+}
+
+.description {
+  color: #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  width: 80%;
+  padding: 0 2.4rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-title {
+  color: #fff; /* Red color */
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  border-bottom: 2px solid #ff4c4c; /* Red underline */
+}
+
+.stat-number {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.image-section img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.ecommerce-section {
+  margin-top: 20px;
+  padding: 0 2.4rem;
+}
+
+.ecommerce-intro {
+  color: #ff4c4c; /* Red color */
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.ecommerce-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 5px 0;
+  color: #fff;
+  border-bottom: 2px solid #ff4c4c; /* Red underline */
+}
+
+.ecommerce-description {
+  color: #ccc;
+  margin-top: 10px;
+}
+/* WORKSHOP SECTION */
+
+/* SCHEDULE SECTION */
+.schedule-section {
+  padding: 40px;
+  display: flex;
+}
+
+.schedule-header {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.intro-text {
+  color: #ff4c4c; /* Red color */
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 5px 0;
+}
+
+.description {
+  color: #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  font-size: 1.3rem;
+  /* padding: 10; */
+}
+
+.schedule-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.card {
+  background-color: #222;
+  padding: 20px;
+  border: 1px solid #ff4c4c; /* Red border */
+  border-radius: 8px;
+}
+
+.card:last-child {
+  grid-column: span 2;
+}
+.date {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.day-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff4c4c; /* Red color */
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ff4c4c; /* Red underline */
+  padding-bottom: 5px;
+}
+
+.session {
+  margin-top: 10px;
+}
+
+.time {
+  color: #ff4c4c; /* Red color */
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.topic {
+  color: #fff;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+/* SCHEDULE SECTION */
+
+/* SPEAKER SECTION */
+.speakers-section {
+  padding: 40px;
+  display: flex;
+}
+
+.speakers-header {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 5px 0;
+}
+
+.description {
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.speakers-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.speaker-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.speaker-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.name {
+  font-size: 1rem;
+  color: #ff4c4c; /* Red color */
+  margin: 10px 0 5px;
+}
+
+.last-name {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: -5px;
+  border-bottom: 2px solid #ff4c4c; /* Red underline */
+  padding-bottom: 5px;
+}
+
+.bio {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 15px 0;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  justify-content: center;
+}
+
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+}
+/* SPEAKER SECTION */
+
+/* LOCATION SECTION */
+
+.location-section {
+  position: relative;
+  padding: 40px;
+  margin: 0 auto;
+  background-attachment: fixed;
+  background-image: url("/assests/Images/speakers-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff; /* Ensures text is readable on dark overlay */
+  z-index: 1; /* Ensure content is above the overlay */
+}
+.location-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.1
+  ); /* Adjust the opacity to make it lighter or darker */
+  z-index: -1; /* Places overlay behind the content */
+}
+
+.location-main-container {
+  display: flex;
+  justify-content: center;
+}
+
+.location-header {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.intro-text {
+  color: #ff4c4c; /* Red color */
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  border-bottom: 1px solid red;
+  margin: 5px 0;
+  color: #fff;
+}
+
+.description-location {
+  color: #111;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.location-cards {
+  display: flex;
+  width: 50%;
+  gap: 10px;
+}
+
+.location-card {
+  background-color: #fff;
+  padding: 20px;
+  /* border-radius: 8px; */
+  width: 300px;
+}
+
+.tag {
+  color: #fff; /* Red color */
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ff4c4c; /* Red underline */
+  padding-bottom: 5px;
+}
+
+.category-description {
+  color: #111;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+/* LOCATION SECTION */
+
+/* FOOTER SECTION */
+.follow-section {
+  background-color: #111;
+  text-align: center;
+  padding: 40px 0;
+  color: #fff;
+}
+
+.follow-title {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0;
+}
+
+.follow-description {
+  font-size: 1rem;
+  color: #ccc;
+  margin: 5px 0 30px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background-color: #ff4c4c;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.icon.facebook::before {
+  content: "F";
+}
+
+.icon.twitter::before {
+  content: "T";
+}
+
+.icon.vine::before {
+  content: "V";
+}
+
+.icon.instagram::before {
+  content: "I";
+}
+
+/* Optional styling for hover effect */
+.icon:hover {
+  background-color: #e60000;
+}
+/* FOOTER SECTION */

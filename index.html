@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Workshop Website</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="styleSheet" />
+    <link href="animate.css" rel="styleSheet" />
+    <link href="queries.css" rel="styleSheet" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header id="hero" class="hero">
+      <div class="main-nav-container" id="sticky-nav-container">
+        <div class="hero-title-container hero-content container">
+          <div class="hero-title-text">
+            <!-- Hamburger Icon -->
+            <div class="hamburger-menu" id="hamburger-menu">
+              <span>&#9776;</span>
+            </div>
+            <h1 class="hero-title">Eventim</h1>
+          </div>
+          <div class="hero-title-icon-container-main">
+            <div class="hero-title-icon-container">
+              <ion-icon name="calendar-outline" class="hero-icon"></ion-icon>
+              <div>
+                <p>fire</p>
+                <p>Futo</p>
+              </div>
+            </div>
+
+            <div class="hero-title-icon-container">
+              <ion-icon name="sunny-outline"></ion-icon>
+              <div>
+                <p>Nov</p>
+                <p>15th</p>
+              </div>
+            </div>
+
+            <div class="hero-title-icon-container">
+              <ion-icon name="cloud-outline"></ion-icon>
+              <div>
+                <p>24h</p>
+                <p>8/16C</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hamburger Menu Dropdown (Initially Hidden) -->
+        <div class="hamburger-dropdown" id="hamburger-dropdown">
+          <div class="close-btn" id="close-btn">&#10005;</div>
+          <nav>
+            <ul id="nav-links" class="nav-links">
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#countdown">Countdown</a></li>
+              <li><a href="#workshop">Workshops</a></li>
+              <li><a href="#schedule">Schedule</a></li>
+              <li><a href="#speakers">Speakers</a></li>
+              <li><a href="#location">Location</a></li>
+              <li><a href="#footer">Follow Us</a></li>
+            </ul>
+          </nav>
+          <div class="social-links-containers">
+            <ion-icon
+              name="logo-facebook"
+              class="social-icon"
+              style="font-size: 1.4rem"
+            ></ion-icon>
+            <ion-icon
+              name="logo-twitter"
+              class="social-icon"
+              style="font-size: 1.4rem"
+            >
+            </ion-icon>
+            <ion-icon
+              name="logo-pinterest"
+              class="social-icon"
+              style="font-size: 1.4rem"
+            ></ion-icon>
+            <ion-icon
+              name="logo-youtube"
+              class="social-icon"
+              style="font-size: 1.4rem"
+            ></ion-icon>
+          </div>
+        </div>
+
+        <div class="hero-nav-container container hero-content">
+          <nav>
+            <ul id="nav-links" class="nav-links">
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#countdown">Countdown</a></li>
+              <li><a href="#workshop">Workshops</a></li>
+              <li><a href="#schedule">Schedule</a></li>
+              <li><a href="#speakers">Speakers</a></li>
+              <li><a href="#location">Location</a></li>
+              <li><a href="#footer">Follow Us</a></li>
+            </ul>
+          </nav>
+          <div class="social-links-containers">
+            <ion-icon name="logo-facebook" class="social-icon"></ion-icon>
+            <ion-icon name="logo-twitter" class="social-icon"></ion-icon>
+            <ion-icon name="logo-pinterest" class="social-icon"></ion-icon>
+            <ion-icon name="logo-youtube" class="social-icon"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="container hero-content hero-content-container">
+        <h6 class="red">Federal University of Technology, Owerri (FUTO)</h6>
+
+        <h2>
+          <span class="red" style="font-family: Courier New, Courier, monospace"
+            >2 </span
+          >days /
+          <span class="red" style="font-family: Courier New, Courier, monospace"
+            >15 </span
+          >talks /<span class="red">1</span>
+          party
+        </h2>
+        <h2 class="hero-content-2">
+          Bringing Knowledge to Life: An Immersive Workshop Experience
+        </h2>
+        <b
+          >November
+          <span style="font-family: Courier New, Courier, monospace"
+            >21-27th</span
+          ></b
+        >
+      </div>
+    </header>
+
+    <section id="countdown" class="section-padding section-countdown">
+      <div class="container count-down-main">
+        <div>
+          <h2>Counting down</h2>
+          <p>
+            Counting down to an unforgettable day of learning, inspiration, and
+            networking! Join us as we gather students, industry experts, and
+            enthusiasts for a full day of hands-on workshops and insightful
+            talks.
+          </p>
+        </div>
+
+        <div class="countdown-element-container">
+          <div class="countdown-element">
+            <p>Dys</p>
+            <span>20:</span>
+          </div>
+
+          <div class="countdown-element">
+            <p>HRS</p>
+            <span>20:</span>
+          </div>
+
+          <div class="countdown-element">
+            <p>MIN</p>
+            <span>20:</span>
+          </div>
+
+          <div class="countdown-element">
+            <p>SEC</p>
+            <span>20</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="workshop" class="workshop-section container">
+      <h3 class="intro-text">Join the</h3>
+      <div class="workshop-section-top">
+        <div class="workshop-header">
+          <h1 class="main-title">Workshops</h1>
+          <p class="description">
+            Expand your skills with sessions covering topics from eCommerce
+            innovations to cloud technology. Each workshop offers practical
+            insights designed to empower participants with hands-on experience
+            and applicable knowledge.
+          </p>
+        </div>
+        <div class="stats">
+          <div class="stat-item">
+            <span class="stat-title">Participants</span>
+            <span class="stat-number">393</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-title">Workshops</span>
+            <span class="stat-number">15</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-title">Speakers</span>
+            <span class="stat-number">32</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2-col">
+        <div class="image-section">
+          <img src="/assests/Images/workshop-1.jpg" alt="Conference Image" />
+        </div>
+        <div class="ecommerce-section">
+          <h4 class="ecommerce-intro">Smart</h4>
+          <h2 class="ecommerce-title">eCommerce</h2>
+          <p class="ecommerce-description">
+            Delve into strategies for maximizing customer experience and
+            engaging modern markets. This workshop offers key insights into the
+            rapidly growing eCommerce industry.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-2-col">
+        <div class="ecommerce-section">
+          <h4 class="ecommerce-intro">Smart</h4>
+          <h2 class="ecommerce-title">Cloud Technology</h2>
+          <p class="ecommerce-description">
+            Completely synergize resource taxing relationships via premier niche
+            markets. Professionally cultivate customer service. Completely
+            pursue scalable customer experience.
+          </p>
+        </div>
+        <div class="image-section">
+          <img src="/assests/Images/workshop-2.webp" alt="Conference Image" />
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule" class="schedule-section container">
+      <div class="schedule-header">
+        <h3 class="intro-text">Check the</h3>
+        <h1 class="main-title">Schedule</h1>
+        <p class="description">
+          See the full schedule and make the most of your experience. With
+          sessions on topics like SVG techniques, project management, and
+          virtualization, there’s something for everyone.
+        </p>
+      </div>
+      <div class="schedule-cards">
+        <div class="card">
+          <span class="date">Nov 21</span>
+          <h2 class="day-title">Day 01.</h2>
+          <div class="session">
+            <span class="time">11:00</span>
+            <p class="topic">Creative SVG techniques</p>
+          </div>
+          <div class="session">
+            <span class="time">13:00</span>
+            <p class="topic">How to manage your project’s toolchain</p>
+          </div>
+          <div class="session">
+            <span class="time">15:00</span>
+            <p class="topic">Brand and business strategy</p>
+          </div>
+        </div>
+        <div class="card">
+          <span class="date">Nov 22</span>
+          <h2 class="day-title">Day 02.</h2>
+          <div class="session">
+            <span class="time">11:00</span>
+            <p class="topic">Virtualization for Developers</p>
+          </div>
+          <div class="session">
+            <span class="time">13:00</span>
+            <p class="topic">Exploiting the Brain for Fun & Profit</p>
+          </div>
+          <div class="session">
+            <span class="time">15:00</span>
+            <p class="topic">Symfony2 Best Practices</p>
+          </div>
+        </div>
+        <div class="card">
+          <span class="date">Nov 23</span>
+          <h2 class="day-title">Night 02. Party</h2>
+          <div class="session">
+            <span class="time">21:00 / Corporate Dinner</span>
+            <p class="topic">Don’t Eat First, and Be Polite</p>
+          </div>
+          <div class="session">
+            <span class="time">23:00 / Party</span>
+            <p class="topic">Exploiting the Brain just for Fun</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="speakers" class="speakers-section container">
+      <div class="speakers-header">
+        <h3 class="intro-text">Meet the</h3>
+        <h1 class="main-title">Speakers</h1>
+        <p class="description">
+          Get inspired by leading professionals in tech. Our lineup of speakers
+          includes industry pioneers who will share their knowledge and
+          insights.
+        </p>
+      </div>
+      <div class="speakers-cards">
+        <div class="speaker-card">
+          <img
+            src="/assests/Images/speakers-1.jpg"
+            alt="Jason Peterson"
+            class="speaker-image"
+          />
+          <p class="name">Olivia <span class="last-name">Ann</span></p>
+          <p class="bio">
+            An expert in digital marketing and eCommerce solutions, Olivia has
+            helped transform numerous startups into thriving online businesses.
+            She’ll share her insights on data-driven customer engagement..
+          </p>
+          <div class="social-icons">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </div>
+        </div>
+        <div class="speaker-card">
+          <img
+            src="/assests/Images/speakers-2.jpg"
+            alt="Ann Coleman"
+            class="speaker-image"
+          />
+          <p class="name">James <span class="last-name">Coleman</span></p>
+          <p class="bio">
+            With over 15 years in cloud technology, Raj brings his expertise in
+            developing scalable applications and managing tech infrastructures.
+            His workshop will focus on optimizing cloud strategies for growth.
+          </p>
+          <div class="social-icons">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="location" class="location-section">
+      <div class="location-main-container container">
+        <div class="location-header">
+          <h3 class="intro-text">Find the</h3>
+          <h1 class="main-title">Location</h1>
+          <p class="description-location">
+            Federal University of Technology, Owerri (FUTO) is proud to host
+            this immersive learning experience. Join us on campus to connect and
+            learn.
+          </p>
+        </div>
+        <div class="location-cards">
+          <div class="location-card">
+            <p class="tag">Futo Guest House</p>
+            <p class="category-title">Accommodation</p>
+            <p class="category-description">
+              Experience comfort and convenience with premium lodging options
+              nearby, tailored to fit all budgets. Our partnered accommodations
+              ensure attendees can stay close to the event with exclusive
+              amenities and services.
+            </p>
+          </div>
+          <div class="location-card">
+            <p class="tag">Meeting</p>
+            <p class="category-title">Facilities</p>
+            <p class="category-description">
+              Enjoy state-of-the-art facilities designed for an immersive
+              workshop experience. From spacious conference rooms to high-tech
+              equipment, our venue is equipped to support learning, networking,
+              and collaboration.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="follow-section">
+      <h2 class="follow-title">Follow us</h2>
+      <p class="follow-description">
+        Don’t be uninformed. Get the latest update
+      </p>
+      <div class="social-icons">
+        <a href="#" class="icon facebook" aria-label="Facebook"></a>
+        <a href="#" class="icon twitter" aria-label="Twitter"></a>
+        <a href="#" class="icon vine" aria-label="Vine"></a>
+        <a href="#" class="icon instagram" aria-label="Instagram"></a>
+      </div>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
