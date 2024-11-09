@@ -14,7 +14,7 @@ html {
   display: flex;
   height: 100vh;
   width: 100vw;
-  margin-bottom: 8rem;
+  padding-bottom: 8rem;
 }
 
 .left-section {
