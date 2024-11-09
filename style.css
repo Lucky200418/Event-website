@@ -136,7 +136,15 @@ body {
   padding: 1.2rem;
   border-bottom: 2px solid red;
 }
-
+.hero-btn {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  width: 10rem;
+  background-color: red;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #fff;
+}
 .hero-title-text {
   display: flex;
   align-items: center;
@@ -168,7 +176,7 @@ body {
 }
 .hero {
   background-attachment: fixed;
-  background-image: url("/assests/Images/event-hero=image.jpg"); /* Replace with your background image */
+  background-image: url("/assests/Images/event-hero-image.jpeg"); /* Replace with your background image */
   background-size: cover;
   background-position: center;
   height: 80vh;
@@ -552,7 +560,7 @@ nav ul li a:hover {
   padding: 40px;
   margin: 0 auto;
   background-attachment: fixed;
-  background-image: url("/assests/Images/speakers-1.jpg");
+  background-image: url("/assests/Images/event-image-spaeker-2.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

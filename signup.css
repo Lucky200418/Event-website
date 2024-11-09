@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Roboto";
+}
+
+.form-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.left-section {
+  background-color: red;
+  background-image: url("/assests/Images/event-hero-image.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Ensure content doesn't spill out */
+}
+
+.left-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: 1; /* Ensure the overlay is behind the text but above the background image */
+}
+
+.left-section * {
+  position: relative;
+  z-index: 2; /* Ensure text and other content are above the overlay */
+}
+
+.left-section h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.left-section p {
+  font-size: 18px;
+}
+
+.right-section {
+  flex: 1.5;
+  background-color: #f8f1eb;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-section h2 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.input-group {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.input-group input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.back-btn {
+  background-color: #ddd;
+}
+
+.next-btn {
+  background-color: red;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    height: 50%;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  .input-group {
+    flex: none;
+    width: 100%;
+  }
+}
+
+/* loader */
+/* Loader Overlay */
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensures it appears on top of everything */
+}
+
+/* Spinner */
+.spinner {
+  border: 8px solid #f3f3f3; /* Light grey border */
+  border-top: 8px solid red; /* Blue color for the spinning part */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+
+.hidden {
+  display: none;
+}
+/* Spin animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* loader */
