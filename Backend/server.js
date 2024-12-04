@@ -31,8 +31,8 @@ app.post("/send-email", async (req, res) => {
   const mailOptions = {
     from: "ordulucky330@gmail.com",
     to: email,
-    subject: "Welcome to Our Conference",
-    text: `Hello ${firstname},  ${lastname}\n\nWorkShop Spot Secured! Hello ${firstname}, ${lastname}\n\n Thanks for securing your spot! We're excited to have you on board. We're excited to have you on board.\n\nBest Regards,\nConference Team`,
+    subject: "WorkShop Spot Secured!",
+    text: `Hello ${firstname},  ${lastname}\n\n Thanks for securing your spot! We're excited to have you on board. We're excited to have you on board.\n\nBest Regards,\nConference Team`,
   };
 
   try {
