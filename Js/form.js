@@ -1,40 +1,122 @@
-// form functionality
-const handleSubmit = function (e) {
+// const scriptURL =
+//   "https://script.google.com/macros/s/AKfycbzngSGpqqg5oo9YMNXaGIXsPh6OsmUu98C4YqCAL__JZ_N6SH_sHzZojDKS4sfbYR9zeQ/exec";
+
+// const form = document.forms["contact-form"];
+
+// form.addEventListener("submit", async (e) => {
+//   e.preventDefault();
+
+//   const loaderOverlay = document.querySelector(".loader-overlay");
+//   loaderOverlay.classList.remove("hidden");
+
+//   try {
+//     const formData = new FormData(form);
+//     const response = await fetch(scriptURL, {
+//       method: "POST",
+//       body: formData,
+//     });
+
+//     loaderOverlay.classList.add("hidden");
+
+//     if (response.ok) {
+//       showPopup("success");
+//       form.reset();
+//     } else {
+//       throw new Error("Form submission failed");
+//     }
+//   } catch (error) {
+//     loaderOverlay.classList.add("hidden");
+//     console.error("Error!", error.message);
+//     showPopup("error", error.message || "Submission failed. Please try again.");
+//   }
+// });
+
+// // Utility functions
+// function showPopup(type, msg = "") {
+//   const popup = document.getElementById(`${type}-popup`);
+//   popup.classList.add("show");
+
+//   if (msg) {
+//     popup.textContent = msg;
+//   }
+
+//   setTimeout(() => {
+//     popup.classList.remove("show");
+//   }, 5000);
+// }
+
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbzngSGpqqg5oo9YMNXaGIXsPh6OsmUu98C4YqCAL__JZ_N6SH_sHzZojDKS4sfbYR9zeQ/exec";
+
+const emailAPIURL = "https://event-website-yfki.onrender.com/send-email";
+
+const form = document.forms["contact-form"];
+
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  // Get form values
-  const firstname = document.getElementById("firstname").value;
-  const lastname = document.getElementById("lastname").value;
-  const phone = document.getElementById("phone").value;
-  const address = document.getElementById("address").value;
-  const city = document.getElementById("city").value;
+  const loaderOverlay = document.querySelector(".loader-overlay");
+  loaderOverlay.classList.remove("hidden");
 
-  // Error message and success handling
-  if (!firstname || !lastname || !phone || !address || !city) {
-    alert("Error: All fields are required!");
-  } else {
-    // Show loader
-    document.querySelector(".loader-overlay").classList.remove("hidden");
+  try {
+    const formData = new FormData(form);
 
-    // Simulate a delay of 5 seconds
-    setTimeout(() => {
-      // Hide loader
-      document.querySelector(".loader-overlay").classList.add("hidden");
+    // Prepare email payload
+    const firstname = formData.get("firstname");
+    const lastname = formData.get("lastname");
+    const email = formData.get("email");
 
-      // Display success message
-      alert("Your info has been saved successfully!");
+    if (!isValidEmail(email)) {
+      throw new Error("Invalid Email");
+    }
 
-      // Clear form fields
-      document.getElementById("firstname").value = "";
-      document.getElementById("lastname").value = "";
-      document.getElementById("phone").value = "";
-      document.getElementById("address").value = "";
-      document.getElementById("city").value = "";
-    }, 5000);
+    // Send data to Google Sheets
+    const sheetResponse = await fetch(scriptURL, {
+      method: "POST",
+      body: formData,
+    });
+
+    if (!sheetResponse.ok) {
+      throw new Error("Failed to save to Google Sheets");
+    }
+
+    // Send email
+    const emailResponse = await fetch(emailAPIURL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, firstname, lastname }),
+    });
+
+    if (!emailResponse.ok) {
+      throw new Error("Failed to send email");
+    }
+
+    loaderOverlay.classList.add("hidden");
+    showPopup("success", "Registration successful! Check your email.");
+    form.reset();
+  } catch (error) {
+    loaderOverlay.classList.add("hidden");
+    console.error("Error!", error.message);
+    showPopup("error", error.message || "Submission failed. Please try again.");
   }
-};
+});
 
-// Attach event listener
-document
-  .querySelector(".next-btn")
-  .addEventListener("click", handleSubmit.bind(this));
+// Email validation function
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+// Popup display function
+function showPopup(type, msg = "") {
+  const popup = document.getElementById(`${type}-popup`);
+  popup.classList.add("show");
+
+  if (msg) {
+    popup.textContent = msg;
+  }
+
+  setTimeout(() => {
+    popup.classList.remove("show");
+  }, 5000);
+}

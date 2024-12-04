@@ -16,13 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   window.addEventListener("scroll", onScroll);
-  onScroll(); // Run once in case elements are already in view
+  onScroll();
 });
 
 // Function to calculate the time left until the target date
 function calculateTimeLeft(targetDate) {
-  const now = new Date().getTime(); // Get the current time in milliseconds
-  const timeDifference = targetDate - now; // Calculate the difference between now and the target date
+  const now = new Date().getTime();
+  const timeDifference = targetDate - now;
 
   // Time calculations for days, hours, minutes, and seconds
   const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
@@ -32,7 +32,7 @@ function calculateTimeLeft(targetDate) {
   const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-  return { days, hours, minutes, seconds }; // Return the time components as an object
+  return { days, hours, minutes, seconds };
 }
 
 // Function to update the countdown display
@@ -52,13 +52,12 @@ function updateCountdownDisplay(timeLeft) {
 
 // Function to start the countdown
 function startCountdown(daysFromNow) {
-  const targetDate = new Date().getTime() + daysFromNow * 24 * 60 * 60 * 1000; // Calculate the target date from now
+  const targetDate = new Date().getTime() + daysFromNow * 24 * 60 * 60 * 1000;
 
   const countdownInterval = setInterval(function () {
-    const timeLeft = calculateTimeLeft(targetDate); // Get the remaining time
-    updateCountdownDisplay(timeLeft); // Update the DOM with the remaining time
+    const timeLeft = calculateTimeLeft(targetDate);
+    updateCountdownDisplay(timeLeft);
 
-    // If the countdown is complete, stop the interval and display "EXPIRED"
     if (
       timeLeft.days <= 0 &&
       timeLeft.hours <= 0 &&
@@ -69,11 +68,11 @@ function startCountdown(daysFromNow) {
       document.querySelector(".countdown-element-container").innerHTML =
         "<p>Countdown Finished!</p>";
     }
-  }, 1000); // Update the countdown every second (1000ms)
+  }, 1000);
 }
 
 // Start the countdown for 100 days
-startCountdown(100);
+startCountdown(3);
 
 // Function to animate the counting of numbers
 function animateStats() {
@@ -81,21 +80,21 @@ function animateStats() {
 
   // Iterate over each stat number and apply the counting effect
   statNumbers.forEach((stat) => {
-    const targetNumber = parseInt(stat.textContent, 10); // Get the final number for each stat
-    let currentNumber = 0; // Start from 0
-    const increment = Math.ceil(targetNumber / 100); // Speed of the count up
+    const targetNumber = parseInt(stat.textContent, 10);
+    let currentNumber = 0;
+    const increment = Math.ceil(targetNumber / 100);
 
     // Use setInterval to count up to the target number
     const counter = setInterval(() => {
-      currentNumber += increment; // Increase the current number by the increment
+      currentNumber += increment;
 
       if (currentNumber >= targetNumber) {
-        currentNumber = targetNumber; // Ensure the number stops at the target
-        clearInterval(counter); // Stop the counter
+        currentNumber = targetNumber;
+        clearInterval(counter);
       }
 
-      stat.textContent = currentNumber; // Update the text in the stat-number span
-    }, 200); // The speed of the animation in milliseconds
+      stat.textContent = currentNumber;
+    }, 200);
   });
 }
 
@@ -111,13 +110,13 @@ document.addEventListener("DOMContentLoaded", () => {
     speakerCards.forEach((card, index) => {
       const cardTop = card.getBoundingClientRect().top;
       if (cardTop < window.innerHeight - 100) {
-        setTimeout(() => card.classList.add("show"), index * 100); // Staggered delay
+        setTimeout(() => card.classList.add("show"), index * 100);
       }
     });
   };
 
   window.addEventListener("scroll", onScroll);
-  onScroll(); // Run once in case elements are already in view
+  onScroll();
 });
 
 // footer bouncing
@@ -129,14 +128,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const footerTop = footer.getBoundingClientRect().top;
     if (footerTop < window.innerHeight - 50) {
       icons.forEach((icon, index) => {
-        setTimeout(() => icon.classList.add("animate"), index * 200); // Staggered delay
+        setTimeout(() => icon.classList.add("animate"), index * 200);
       });
-      window.removeEventListener("scroll", onScroll); // Trigger animation only once
+      window.removeEventListener("scroll", onScroll);
     }
   };
 
   window.addEventListener("scroll", onScroll);
-  onScroll(); // Run once in case footer is already in view
+  onScroll();
 });
 
 // Smooth scrolling for internal links

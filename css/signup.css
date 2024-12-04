@@ -177,5 +177,52 @@ form {
     transform: rotate(360deg);
   }
 }
-
 /* loader */
+
+/* PopUp Styles */
+.popup {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  z-index: 1000;
+  display: none; /* Initially hidden */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.popup.success {
+  background-color: #4caf50; /* Green for success */
+}
+
+.popup.error {
+  background-color: #f44336; /* Red for error */
+}
+
+.popup.show {
+  display: block; /* Show when this class is added */
+  animation: slideIn 0.5s ease, fadeOut 3s 3s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+/* PopUp Styles */

@@ -9,7 +9,7 @@ app.use(cors());
 
 app.use(
   cors({
-    origin: "http://127.0.0.1:5500",
+    origin: "https://eventworkshop.netlify.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
@@ -32,7 +32,7 @@ app.post("/send-email", async (req, res) => {
     from: "ordulucky330@gmail.com",
     to: email,
     subject: "Welcome to Our Conference",
-    text: `Hello ${firstname},  ${lastname}\n\nWelcome to our conference! We're excited to have you on board.\n\nBest Regards,\nConference Team`,
+    text: `Hello ${firstname},  ${lastname}\n\nWorkShop Spot Secured! Hello ${firstname}, ${lastname}\n\n Thanks for securing your spot! We're excited to have you on board. We're excited to have you on board.\n\nBest Regards,\nConference Team`,
   };
 
   try {

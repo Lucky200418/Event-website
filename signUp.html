@@ -22,36 +22,57 @@
       </div>
       <div class="right-section">
         <h2>Hello! Please tell us a little bit about yourself.</h2>
-        <form>
+        <form name="contact-form">
           <div class="input-group">
             <label for="firstname">Firstname</label>
-            <input type="text" id="firstname" name="firstname" placeholder="" />
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              placeholder=""
+              required
+            />
           </div>
           <div class="input-group">
             <label for="lastname">Lastname</label>
-            <input type="text" id="lastname" name="lastname" placeholder="" />
+            <input
+              type="text"
+              id="lastname"
+              name="lastname"
+              placeholder=""
+              required
+            />
           </div>
           <div class="input-group">
             <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" placeholder="" />
+            <input type="tel" id="phone" name="phone" placeholder="" required />
           </div>
           <div class="input-group">
-            <label for="address">Address</label>
-            <input type="text" id="address" name="address" placeholder="" />
-          </div>
-          <div class="input-group">
-            <label for="city">City</label>
-            <input type="text" id="city" name="city" placeholder="" />
+            <label for="address">Email Address</label>
+            <input
+              type="email"
+              id="address"
+              name="email"
+              placeholder=""
+              required
+            />
           </div>
           <div class="form-buttons">
-            <a href="/index.html"
-              ><button type="button" class="back-btn">BACK</button></a
-            >
-            <button class="next-btn">Book a Seat</button>
+            <button type="button" class="back-btn">BACK</button>
+            <button type="submit" class="next-btn">Submit</button>
           </div>
         </form>
       </div>
     </div>
+
+    <div id="success-popup" class="popup success">
+      Registration successful! Check your mail.
+    </div>
+
+    <div id="error-popup" class="popup error">
+      Registration failed! Please try again.
+    </div>
+
     <div class="loader-overlay hidden">
       <div class="spinner"></div>
     </div>

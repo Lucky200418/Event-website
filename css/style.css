@@ -37,6 +37,7 @@ body {
 .grid-2-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 3rem;
 }
 /* HAMBURGER STYLES */
 /* Hamburger Dropdown */
@@ -561,7 +562,7 @@ nav ul li a:hover {
   padding: 40px;
   margin: 0 auto;
   background-attachment: fixed;
-  background-image: url("/assests/Images/event-image-spaeker-2.jpeg");
+  background-image: url("/assests/Images/speaker-1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -680,13 +681,13 @@ nav ul li a:hover {
 .icon {
   width: 40px;
   height: 40px;
-  background-color: #ff4c4c;
+  /* background-color: #ff4c4c; */
   border-radius: 50%;
   display: inline-block;
   text-align: center;
   line-height: 40px;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 }
 
 .icon.facebook::before {
@@ -707,6 +708,6 @@ nav ul li a:hover {
 
 /* Optional styling for hover effect */
 .icon:hover {
-  background-color: #e60000;
+  transform: scale(0.7);
 }
 /* FOOTER SECTION */
